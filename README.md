@@ -1,16 +1,17 @@
+# casbin
 
 
-Which starts a server at http://localhost:8080 with the following routes:
 
-Which starts a server at `http://localhost:8080` with the following routes:
+```
+GET http://localhost:9000/api/v1/hello
+很遗憾,权限验证没有通过
 
-* `POST /login` - accessible if not logged in
-   * takes `name` as a form-data parameter - there is no password
-   * Valid Users: 
-     * `Admin` ID: `1`, Role: `admin`
-     * `Sabine` ID: `2`, Role: `member`
-     * `Sepp` ID: `3`, Role: `member`
-* `POST /logout` - accessible if logged in
-* `GET /member/current` - accessible if logged in as a member
-* `GET /member/role` - accessible if logged in as a member
-* `GET /admin/stuff` - accessible if logged in as an admin
+POST http://localhost:9000/api/v1/add
+增加Policy
+增加成功
+
+GET http://localhost:9000/api/v1/hello
+恭喜您,权限验证通过
+Hello 接收到GET请求..
+```
+
